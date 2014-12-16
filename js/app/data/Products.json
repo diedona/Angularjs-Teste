@@ -1,0 +1,20 @@
+[
+    {
+        "Id": 1,
+        "Title": "Notebook Inspiron Dell",
+        "Price": 1500,
+        "Quantity": 2
+    },
+    {
+        "Id": 2,
+        "Title": "Roteador D-Link Wireless",
+        "Price": 100.5,
+        "Quantity": 5
+    },
+    {
+        "Id": 3,
+        "Title": "Memória Ram Kingston 8 GB DDR3",
+        "Price": 89,
+        "Quantity": 4
+    }
+]
