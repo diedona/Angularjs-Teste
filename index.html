@@ -17,22 +17,22 @@
 
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/bootstrap-theme.css" rel="stylesheet" />
-    
+
 </head>
 
 <body ng-app="TesteJS">
-    
+
     <div class="container">
-        
+
         <div class="row" ng-controller="HeaderCtrl">
             <div class="col-md-12">
                 <h1>Testes com AngularJS</h1>
                 <em>{{date | date: 'dd/MM/yyyy - HH:mm:ss'}}</em>
             </div>
         </div>
-        
+
         <br />
-        
+
         <div class="row" ng-controller="BodyCtrl">
             <div class="col-md-6">
                 <ul class="list-group">
@@ -45,16 +45,38 @@
                     </li>
                 </ul>
             </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form role="form" name="frmAddProduct" novalidate ng-submit="SaveProduct()">
+                            <div class="form-group">
+                                <label for="">Nome</label>
+                                <input type="text" class="form-control" ng-model="Product.Title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Preço</label>
+                                <input type="number" class="form-control" ng-model="Product.Price" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Qtd. em Estoque</label>
+                                <input type="number" class="form-control" ng-model="Product.Quantity" required>
+                            </div>
+                            <button type="submit" class="btn btn-info">Salvar</button>
+                            <button type="reset" class="btn btn-default">Limpar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        
+
     </div>
-    
+
     <script src="js/angular.js"></script>
     <script src="js/app/app.js"></script>
     <script src="js/app/controller/HeaderCtrl.js"></script>
     <script src="js/app/controller/BodyCtrl.js"></script>
     <script src="js/app/service/ProductService.js"></script>
-    
+
 </body>
 
 </html>
